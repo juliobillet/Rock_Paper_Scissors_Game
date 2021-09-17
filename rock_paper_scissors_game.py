@@ -60,3 +60,23 @@ elif players_choice - computer_choice == -1 or players_choice - computer_choice 
   print("You lose!")
 elif players_choice - computer_choice == -2 or players_choice - computer_choice == 1:
   print("You Win!")
+
+# Explanation of my logic above:
+#            |- (-0) = 0 ==> draw
+# Rock -> 0 -|- (-1) = -1 ==> lose
+#            |- (-2) = -2 ==> win
+#__________________________
+#
+#             |- (-0) = 1 ==> win
+# Paper -> 1 -|- (-1) = 0 ==> draw
+#             |- (-2) = -1 ==> lose
+#__________________________
+#
+#                |- (-0) = 2 ==> lose
+# Scissors -> 2 -|- (-1) = 1 ==> win
+#                |- (-2) = 0 ==> draw
+# 
+# So: 
+# To win:        results must be = -2 or 1 or 1
+# To lose:       results must be = -1 or -1 or 2
+# To be a draw:  results must be = 0 or 0 or 0 (or, when 1st and 2nd values are the same, so when you subtract them, the result will always be 0)
